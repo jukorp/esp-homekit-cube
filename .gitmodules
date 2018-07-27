@@ -7,3 +7,6 @@
 [submodule "components/esp-wolfssl"]
 	path = components/esp-wolfssl
 	url = git@github.com:maximkulkin/esp-wolfssl
+[submodule "components/WS2812FX"]
+	path = components/WS2812FX
+	url = git@github.com:pcsaito/WS2812FX-rtos

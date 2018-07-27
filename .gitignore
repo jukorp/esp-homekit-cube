@@ -52,4 +52,7 @@ Mkfile.old
 dkms.conf
 build/
 firmware/
+
 *.DS_Store
+
+src/wifi.h
