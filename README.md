@@ -12,12 +12,18 @@ git submodule update --init --recursive
 
 4. Install [esptool.py](https://github.com/themadinventor/esptool) and make it available on your PATH. If you used esp-open-sdk then this is done already.
 5. Checkout [esp-open-rtos](https://github.com/SuperHouse/esp-open-rtos) and set SDK_PATH environment variable pointing to it.
+6. Instal [SLAB_USBtoUART driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
+  set ESPPORT environment variable pointing to USB device your ESP8266 is attached to (assuming your device is at /dev/tty.SLAB_USBtoUART):
+```shell
+export ESPPORT=/dev/tty.SLAB_USBtoUART
+```
 
 ## Hardware
 - [Adafruit Huzzah Feather](https://www.adafruit.com/product/2821)
-- Neopixels (with data connection attached to `RX` pin) 
+- Neopixels (with data connection attached to `RX` pin)
 
 ## commands:
 - `make -C src erase_flash`
-- `make -C src test`
+- `make -C src flash`
 - `make -C src monitor`
+- `make -C src test` (will run `flash` and `monitor`)
